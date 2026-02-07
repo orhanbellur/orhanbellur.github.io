@@ -10,5 +10,6 @@ system("git remote add origin https://github.com/orhanbellur/orhanbellur.github.
 
 # Commit & deploy
 system("git add .")
+system("git status")
 system("git commit -m 'Update personal website'")
 system("git push -u origin main")
