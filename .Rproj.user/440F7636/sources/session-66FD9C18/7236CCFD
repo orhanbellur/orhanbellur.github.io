@@ -1,11 +1,11 @@
 {
     "id": "7236CCFD",
-    "path": null,
-    "project_path": null,
+    "path": "~/Desktop/personal-website/MyWebsite.R",
+    "project_path": "MyWebsite.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1770498551916.0,
     "source_on_save": false,
     "relative_order": 1,
@@ -17,11 +17,11 @@
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 29813,
-    "encoding": "",
+    "lastKnownWriteTime": 1770503979,
+    "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1770502042256,
+    "last_content_update": 1770503979936,
     "read_only": false,
     "read_only_alternatives": []
 }

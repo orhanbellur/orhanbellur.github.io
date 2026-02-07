@@ -1,0 +1,15 @@
+setwd("~/personal-website")
+
+# Check files
+list.files()
+
+# Initialize git repo (once)
+system("git init")
+system("git branch -M main")
+system("git remote add origin https://github.com/orhanbellur/orhanbellur.github.io")
+
+# Commit & deploy
+system("git add .")
+system("git status")
+system("git commit -m 'Update personal website'")
+system("git push -u origin main")

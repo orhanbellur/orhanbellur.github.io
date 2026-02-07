@@ -15,7 +15,10 @@
   <link rel="stylesheet" href="site.css" />
 </head>
 
-<body>
+<body id="top">
+  <div class="scroll-progress" aria-hidden="true">
+    <span class="scroll-progress-bar"></span>
+  </div>
   <!-- ===== NAV ===== -->
   <nav class="nav">
     <div class="nav-inner">
@@ -38,6 +41,11 @@
         <p class="eyebrow">Computational Biology · Systems & Multi-Omics</p>
 
         <h1>Orhan Bellur</h1>
+
+        <div class="status-badges">
+          <span>Open to collaborations</span>
+          <span>Based in Munich</span>
+        </div>
 
         <p class="intro">
           Computational biologist specializing in systems-level and multi-omics
@@ -103,6 +111,20 @@
           clinicians and drug discovery teams.
         </p>
       </div>
+      <div class="highlight-grid">
+        <article class="highlight-card">
+          <p class="card-title">Network-first discovery</p>
+          <p>Integrating systems biology with pharmacology to identify repositioning targets.</p>
+        </article>
+        <article class="highlight-card">
+          <p class="card-title">Multi-omics pipelines</p>
+          <p>Scalable workflows for harmonizing transcriptomics, proteomics, and metabolomics.</p>
+        </article>
+        <article class="highlight-card">
+          <p class="card-title">Translational impact</p>
+          <p>Bridging computational insights with experimental validation and clinical context.</p>
+        </article>
+      </div>
     </section>
 
     <section id="expertise" class="section">
@@ -165,10 +187,12 @@
       <div class="grid">
         <article class="card">
           <p class="card-title">Alzheimer’s & Dementia (2023)</p>
+          <p class="publication-meta">Network medicine · Drug repurposing</p>
           <p>Bellur O. et al. Multi-omics networks highlight therapeutic priorities.</p>
         </article>
         <article class="card">
           <p class="card-title">Molecular Omics (2023)</p>
+          <p class="publication-meta">Metabolic modeling · Neurodegeneration</p>
           <p>Odongo R., Bellur O. et al. Translational metabolic modeling.</p>
         </article>
       </div>
@@ -193,11 +217,33 @@
           <p>linkedin.com/in/orhan-bellur</p>
         </div>
       </div>
+      <div class="cta-banner">
+        <p>Have a project in mind? Let’s discuss network-based solutions for complex diseases.</p>
+        <a class="button primary" href="mailto:orhanbellur1117.ob@gmail.com">Start a conversation</a>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
     © 2026 Orhan Bellur
   </footer>
+
+  <a class="back-to-top" href="#top">Back to top ↑</a>
+
+  <script>
+    const progressBar = document.querySelector(".scroll-progress-bar");
+    const backToTop = document.querySelector(".back-to-top");
+
+    const updateProgress = () => {
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = scrollHeight ? (scrollTop / scrollHeight) * 100 : 0;
+      progressBar.style.width = `${progress}%`;
+      backToTop.classList.toggle("visible", scrollTop > 500);
+    };
+
+    window.addEventListener("scroll", updateProgress);
+    window.addEventListener("load", updateProgress);
+  </script>
 </body>
 </html>
