@@ -348,6 +348,36 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.contact-link:hover {
+  color: var(--accent);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(124, 130, 255, 0.15);
+  border: 1px solid rgba(124, 130, 255, 0.3);
+}
+
+.icon svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
 .cta-banner {
   margin-top: 2rem;
   padding: 1.5rem;
